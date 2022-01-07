@@ -37,7 +37,8 @@ html:focus-within {
 
 /* Set core body defaults */
 body {
-  font-family: "Open Sans", "Lato", sans-serif;
+  font-family: "Roboto", "Open Sans", sans-serif;
+  font-weight: normal;
   min-height: 100vh;
   text-rendering: optimizeSpeed;
   line-height: 1.5;
@@ -90,4 +91,5 @@ h4,
 h5,
 h6 {
   font-family: "Roboto", sans-serif;
+  font-weight: normal;
 }

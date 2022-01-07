@@ -16,6 +16,7 @@
   background-color: #03be9f;
   border: 1px solid #03be9f;
   color: #dafff7;
+  align-self: center;
 }
 
 .btn:hover,
@@ -29,4 +30,14 @@
   background-color: #ffffff;
   border-color: #ffffff;
   color: #000000;
+}
+
+@media (min-width: 768px) {
+  .btnStart {
+    display: block;
+    background-color: #03be9f;
+    border: 1px solid #03be9f;
+    color: #dafff7;
+    align-self: start;
+  }
 }

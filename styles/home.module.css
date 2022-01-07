@@ -1,0 +1,85 @@
+.container {
+  height: 100vh;
+  background-color: #000000;
+  color: #ffffff;
+  border-bottom-right-radius: 2.5rem;
+  border-bottom-left-radius: 2.5rem;
+}
+
+.header {
+  height: 5.5rem;
+}
+.headerTitle {
+  font-size: 3rem;
+  padding: 1.5rem 2rem;
+}
+
+.main {
+  display: flex;
+  flex-direction: column-reverse;
+  align-items: center;
+  padding: 0 30px;
+}
+.ctaContainer {
+  margin-top: 1rem;
+  display: flex;
+  flex-direction: column;
+}
+.ctaTitle {
+  font-size: 2rem;
+}
+
+.ctaText {
+  color: #eeeeee;
+  margin: 2rem 0;
+}
+.imgContainer {
+  position: relative;
+  margin-top: 25px;
+}
+
+.img {
+  border: 1.25rem solid #ffffff;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  position: relative;
+  z-index: 1;
+}
+.square {
+  display: none;
+}
+
+@media (min-width: 768px) {
+  .header {
+    height: 6.5rem;
+  }
+  .main {
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: flex-start;
+    margin-top: 8.5rem;
+  }
+
+  .ctaContainer {
+    max-width: 26.5rem;
+  }
+  .ctaTitle {
+    font-size: 4rem;
+  }
+
+  .img {
+    border: 3.25rem solid #ffffff;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    position: relative;
+    z-index: 1;
+  }
+
+  .square {
+    display: block;
+    width: 26rem;
+    height: 26rem;
+    background-color: #ffffff;
+    position: absolute;
+    bottom: 1.6rem;
+    left: 3.2rem;
+  }
+}
