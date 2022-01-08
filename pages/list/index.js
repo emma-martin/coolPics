@@ -1,6 +1,7 @@
 import { Fragment, useEffect, useState } from "react";
 import PicList from "../../components/pics/pic-list";
 import Button from "../../components/ui/button";
+import Loader from "../../components/ui/loader";
 import SearchBar from "../../components/ui/search-bar";
 import styles from "../../styles/list-page.module.css";
 
@@ -56,8 +57,12 @@ export default function ListPage({ pics, headerLink }) {
       </header>
       <main className={styles.main}>
         <PicList picsList={filteredResults} />
-        {(!!loading && <p>loading</p>) || hasNextPage ? (
-          <Button onClick={loadNextPage}>{"Load more".toUpperCase()}</Button>
+        {hasNextPage && filteredResults.length ? (
+          (!!loading && <Loader />) || (
+            <Button onClick={loadNextPage}>{"Load more".toUpperCase()}</Button>
+          )
+        ) : !filteredResults.length ? (
+          <p>no results found</p>
         ) : (
           <p>No more pages</p>
         )}
