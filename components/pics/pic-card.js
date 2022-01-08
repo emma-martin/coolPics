@@ -1,8 +1,8 @@
 import Image from "next/image";
 import Link from "next/link";
 import styles from "./pic-card.module.css";
-const myLoader = ({ src, width, height }) => {
-  return `https://picsum.photos/id/${src}/${width}/${height || 336}`;
+const myLoader = ({ src }) => {
+  return `https://picsum.photos/id/${src}/384/336`;
 };
 function PicCard(props) {
   const { id, author, index } = props;
@@ -15,7 +15,7 @@ function PicCard(props) {
         loader={myLoader}
         src={id}
         alt="another pic without alt"
-        layout="intrinsic"
+        layout="responsive"
         width={384}
         height={336}
       />

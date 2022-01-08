@@ -3,7 +3,6 @@
   overflow: hidden;
   margin: 0.5rem 4rem;
   width: 24rem;
-  height: 21rem;
   position: relative;
 }
 .author {
@@ -54,8 +53,6 @@
     flex: 25%;
     margin: 0 1rem 1rem 0;
     max-width: 24rem;
-    width: auto;
-    max-height: 263px;
     padding: 0;
     position: relative;
     box-shadow: 0;
