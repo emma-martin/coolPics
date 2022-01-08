@@ -19,4 +19,9 @@
     font-size: 3.5rem;
     font-weight: normal;
   }
+
+  .infoBox {
+    max-width: 120rem;
+    margin: 2.5rem 8rem;
+  }
 }
