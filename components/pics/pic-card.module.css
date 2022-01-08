@@ -6,7 +6,15 @@
   height: 21rem;
   position: relative;
 }
-
+.author {
+  visibility: visible;
+  opacity: 1;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  background: white;
+  width: 100%;
+}
 .numberBox {
   text-align: center;
   font-size: 1.5rem;
@@ -25,6 +33,22 @@
   padding: 1rem;
 }
 
+.authorLink {
+  text-decoration: none;
+  color: #000000;
+  font-size: 1.5rem;
+}
+
+.authorLink::before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
 @media (min-width: 768px) {
   .item {
     flex: 25%;
@@ -34,14 +58,24 @@
     max-height: 263px;
     padding: 0;
     position: relative;
+    box-shadow: 0;
+    transition: box-shadow 0.3s;
   }
 
   .item:hover {
     cursor: pointer;
+    box-shadow: 0px 4px 14px rgba(0, 0, 0, 0.25);
+  }
+
+  .author {
+    visibility: hidden;
+    opacity: 0;
+    transition: visibility 0s, opacity 0.2s linear;
   }
 
   li:hover .author {
-    display: block;
+    visibility: visible;
+    opacity: 1;
     position: absolute;
     bottom: 0;
     left: 0;
@@ -49,45 +83,7 @@
     width: 100%;
   }
 
-  .author {
-    display: none;
-  }
-
-  .authorLink {
-    text-decoration: none;
-    color: #000000;
-    font-size: 1.5rem;
-  }
-  .authorLink {
-    transition: background 100ms ease;
-    position: static;
-  }
-
-  .authorLink,
-  .authorLink::before {
-    cursor: pointer;
-  }
-
-  .authorLink::before {
-    content: "";
-    display: block;
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-  }
-
   .authorLink:focus {
     outline: none;
-  }
-
-  .authorLink:hover {
-    background: #333333;
-  }
-
-  .authorLink:focus::before {
-    outline: 1px solid #ffffff;
-    outline-offset: -0.8rem;
   }
 }
