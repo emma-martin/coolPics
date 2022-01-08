@@ -4,14 +4,14 @@ function SearchBar(props) {
   return (
     <div className={styles.searchbarContainer}>
       <div className={styles.searchbarInputContainer}>
-        <label htmlFor="earch">
-          <span className={styles.visuallyHidden}>Search images</span>
+        <label htmlFor="search">
+          <span className={styles.visuallyHidden}>Search by author</span>
         </label>
         <input
           type="text"
           id="search"
           className={styles.searchInput}
-          placeholder="search images"
+          placeholder="Search by author"
           value={props.searchQuery}
           onChange={props.onChangeQuery}
         />

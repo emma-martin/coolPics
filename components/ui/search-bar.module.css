@@ -1,0 +1,62 @@
+.searchbarContainer {
+  display: flex;
+  width: 25rem;
+  height: 3.3rem;
+  margin-top: 2.5rem;
+  background-color: #fff;
+  border: 1px solid #aaaaaa;
+  border-radius: 6px;
+  overflow: hidden;
+}
+
+.searchbarInputContainer {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  padding: 2px 15px;
+}
+
+.searchInput {
+  width: 100%;
+  height: 100%;
+  outline: none;
+  border: none;
+  border-radius: 6px;
+}
+
+.searchInput:-webkit-autofill,
+.searchInput:-webkit-autofill:hover,
+.searchInput:-webkit-autofill:focus {
+  -webkit-text-fill-color: #aaaaaa;
+  color: #aaaaaa;
+  box-shadow: 0 0 0px 1000px white inset;
+  -webkit-box-shadow: 0 0 0px 1000px white inset;
+}
+.searchInput:focus {
+  outline: none;
+}
+.searchInput:focus::placeholder {
+  opacity: 0;
+}
+
+.searchInput::placeholder {
+  color: #aaaaaa;
+  transition: all 250ms ease-in-out;
+}
+
+.searchIcon {
+  color: #aaaaaa;
+  margin-right: 10px;
+  width: 24px;
+  cursor: pointer;
+}
+
+.visuallyHidden {
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+}

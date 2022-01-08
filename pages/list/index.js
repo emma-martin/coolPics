@@ -47,7 +47,7 @@ export default function ListPage({ pics, headerLink }) {
 
   return (
     <Fragment>
-      <header>
+      <header className={styles.header}>
         <h1>Random Images</h1>
         <SearchBar
           searchQuery={searchQuery}
