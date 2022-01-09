@@ -57,14 +57,14 @@ export default function ListPage({ pics, headerLink }) {
       </header>
       <main className={styles.main}>
         <PicList picsList={filteredResults} />
-        {hasNextPage && filteredResults.length ? (
+        {hasNextPage && filteredResults.length && !searchQuery ? (
           (!!loading && <Loader />) || (
             <Button onClick={loadNextPage}>{"Load more".toUpperCase()}</Button>
           )
         ) : !filteredResults.length ? (
           <p className={styles.infoBox}>No results found</p>
         ) : (
-          <p className={styles.infoBox}>No more pages</p>
+          !searchQuery && <p className={styles.infoBox}>No more pages</p>
         )}
       </main>
     </Fragment>
