@@ -26,7 +26,6 @@ function DetailPage() {
             height={336}
           />
         </div>
-        <div className={styles.square}></div>
       </main>
     </div>
   );
