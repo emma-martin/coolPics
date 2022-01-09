@@ -18,15 +18,15 @@
 .numberBox {
   text-align: center;
   font-size: 1.5rem;
-  border-radius: 100px;
+  border-radius: 6.25rem;
   position: absolute;
   background-color: rgba(17, 17, 17, 0.8);
   color: #ffffff;
   padding: 3px;
   width: 4.5rem;
   z-index: 1;
-  right: 13px;
-  top: 16px;
+  right: 0.8rem;
+  top: 1rem;
 }
 .authorLink {
   text-decoration: none;

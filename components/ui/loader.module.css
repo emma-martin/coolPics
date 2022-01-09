@@ -5,14 +5,14 @@
 }
 
 .dotsContainer {
-  width: 58px;
+  width: 3.6rem;
   display: flex;
   justify-content: space-between;
 }
 
 .pulseDot {
-  width: 12px;
-  height: 12px;
+  width: 0.75rem;
+  height: 0.75rem;
   border-radius: 6px;
   background-color: #00ffde;
 }
