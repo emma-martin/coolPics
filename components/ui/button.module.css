@@ -1,5 +1,5 @@
 .btn {
-  width: 18.75rem;
+  width: 12.5rem;
   text-decoration: none;
   cursor: pointer;
   border-radius: 8px;
@@ -11,35 +11,56 @@
   color: #000000;
   align-self: center;
   margin-bottom: 12rem;
+  height: 3rem;
+  padding: 1rem;
+  line-height: 1rem;
 }
 
 .btnStart {
   display: block;
-  background-color: #03be9f;
-  border: 1px solid #03be9f;
-  color: #dafff7;
+  background-color: #00ffde;
+  border: 1px solid #00ffde;
+  color: #000000;
   align-self: center;
+  margin-bottom: 2rem;
 }
 
-.btn:hover,
 .btn:active {
   background-color: #eeeeee;
   border-color: #eeeeee;
 }
 
-.btnStart:hover,
 .btnStart:active {
-  background-color: #ffffff;
-  border-color: #ffffff;
-  color: #000000;
+  background-color: #aaaaaa;
+  border-color: #aaaaaa;
+  color: #ffffff;
 }
 
 @media (min-width: 768px) {
+  .btn {
+    width: 18.75rem;
+    height: 3.5rem;
+    line-height: 1.5rem;
+  }
   .btnStart {
     display: block;
     background-color: #03be9f;
     border: 1px solid #03be9f;
     color: #dafff7;
     align-self: start;
+  }
+}
+
+@media (hover: hover) {
+  .btn:hover,
+  .btn:active {
+    background-color: #eeeeee;
+    border-color: #eeeeee;
+  }
+  .btnStart:hover,
+  .btnStart:active {
+    background-color: #ffffff;
+    border-color: #ffffff;
+    color: #000000;
   }
 }

@@ -8,22 +8,26 @@
 
 .header {
   height: 5.5rem;
+  display: flex;
+  justify-content: center;
 }
 .headerTitle {
-  font-size: 3rem;
-  padding: 1.5rem 2rem;
+  font-size: 2rem;
+  padding: 0.8rem 0;
 }
 
 .main {
   display: flex;
-  flex-direction: column-reverse;
+  flex-direction: column;
   align-items: center;
-  padding: 0 30px;
+  padding: 0 1.8rem;
 }
 .ctaContainer {
   margin-top: 1rem;
   display: flex;
   flex-direction: column;
+  align-items: center;
+  max-width: 21rem;
 }
 .ctaTitle {
   font-size: 2rem;
@@ -31,26 +35,40 @@
 
 .ctaText {
   color: #eeeeee;
-  margin: 2rem 0;
+  margin: 1rem 0 2rem;
+  text-align: center;
 }
 .imgContainer {
   position: relative;
-  margin-top: 25px;
+  margin-top: 1rem;
 }
 
 .img {
-  border: 1.25rem solid #ffffff;
+  border: 2rem solid #ffffff;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   position: relative;
   z-index: 1;
+  width: 15rem;
 }
+
 .square {
-  display: none;
+  display: block;
+  width: 15rem;
+  height: 15rem;
+  background-color: #ffffff;
+  position: absolute;
+  bottom: 0.9rem;
+  left: 1.1rem;
 }
 
 @media (min-width: 768px) {
+  .headerTitle {
+    font-size: 3rem;
+    padding: 1.5rem 0 0 2rem;
+  }
   .header {
     height: 6.5rem;
+    display: block;
   }
   .main {
     flex-direction: row;
@@ -66,19 +84,45 @@
     font-size: 4rem;
   }
 
+  .ctaText {
+    margin: 2rem 0;
+    text-align: left;
+  }
+
   .img {
     border: 3.25rem solid #ffffff;
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-    position: relative;
-    z-index: 1;
+    width: 26rem;
   }
 
   .square {
-    display: block;
     width: 26rem;
     height: 26rem;
-    background-color: #ffffff;
-    position: absolute;
+    bottom: 1.6rem;
+    left: 3.2rem;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 922px) {
+  .main {
+    flex-direction: column;
+    align-items: center;
+    margin-top: 1rem;
+  }
+
+  .ctaContainer a {
+    align-self: center;
+  }
+  .ctaText {
+    text-align: center;
+  }
+  .img {
+    border: 3.25rem solid #ffffff;
+    width: 26rem;
+  }
+
+  .square {
+    width: 26rem;
+    height: 26rem;
     bottom: 1.6rem;
     left: 3.2rem;
   }
