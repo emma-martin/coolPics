@@ -1,7 +1,8 @@
 import Image from "next/image";
 import { useRouter } from "next/router";
-const myLoader = ({ src, width, height }) => {
-  return `https://picsum.photos/id/${src}/${width}/${height || 267}`;
+import styles from "../../styles/detail-page.module.css";
+const myLoader = ({ src }) => {
+  return `https://picsum.photos/id/${src}/384/336`;
 };
 function DetailPage() {
   const router = useRouter();
@@ -10,15 +11,23 @@ function DetailPage() {
     return <p>No pic found!</p>;
   }
   return (
-    <div>
-      <h1>Image Selected</h1>
-      <Image
-        loader={myLoader}
-        src={picId}
-        alt="another pic without alt"
-        width={384}
-        height={336}
-      />
+    <div className={styles.container}>
+      <header className={styles.header}>
+        <h1>Image Selected</h1>
+      </header>
+      <main className={styles.main}>
+        <div className={styles.img}>
+          <Image
+            loader={myLoader}
+            src={picId}
+            alt="another pic without alt"
+            layout="responsive"
+            width={384}
+            height={336}
+          />
+        </div>
+        <div className={styles.square}></div>
+      </main>
     </div>
   );
 }
