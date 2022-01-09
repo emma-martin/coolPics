@@ -22,7 +22,7 @@ Responsive grid with a set of 9 images per load using Lorem Picsum: https://pics
 
 For desktop the author's name is displayed on hovering the card. This is also a link to a single view of the image clicked. On mobile, clicking the author's name navigates to the single view.
 
-Includes pagination and a search bar to filter the images displayed by the author's name.
+Includes pagination and a search bar to filter the images displayed by author's name.
 
 ## Corner cases considered
 
